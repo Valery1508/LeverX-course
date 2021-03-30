@@ -1,0 +1,2 @@
+main-class: ru.leverx.task1.PersonGreeting
+class-path: bin/
