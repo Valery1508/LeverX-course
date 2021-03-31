@@ -13,3 +13,12 @@
 3. Use "javac -d bin src/ru/leverx/task1/*.java" to compile all classes from project. "-d bin" sets the destination directory (bin) for class files.
 4. Build the programm using "jar -cmf manifest.mf person-greeting.jar -C bin .". After "-cmf" we specify the path to the manifest file. After "-C" we specify the path to compiled files. "." in the end means path where the jar file will be placed.In our case, this is the main directory.
 5. Use "java -jar person-greeting.jar" to run jar file. "-jar" means that the Jar file is running.
+---
+### To create and run JAR-file when we have additional libraries (in our case one jar file):
+1. Download project to your computer.
+2. Go to the project directory using command line. For instance, use "cd path\LeverX-course".
+3. Use "javac -d bin src/ru/leverx/task1/*.java" to compile all classes from project. "-d bin" sets the destination directory (bin) for class files.
+4. Create directory with name "lib" and add this file there.
+5. Open file [manifest.mf](manifest.mf) and replace line "class-path: bin/" with "class-path: lib/commons-lang3-3.12.0.jar". class-path is path to additional libraries.
+6. Build the programm using "jar -cmf manifest.mf person-greeting.jar -C bin .". After "-cmf" we specify the path to the manifest file. After "-C" we specify the path to compiled files. "." in the end means path where the jar file will be placed.In our case, this is the main directory.
+7. Use "java -jar person-greeting.jar" to run jar file. "-jar" means that the Jar file is running.
